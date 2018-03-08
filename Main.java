@@ -4,6 +4,8 @@ public class Main {
 
   public Main() {}
 
+  /* ROSIE : What does args do? */ 
+  
   public static void main(String[] args) {
     System.out.println("Menu:");
     System.out.println("Type any number between 1 and 6");
@@ -14,6 +16,10 @@ public class Main {
     System.out.println("5)Update ISD code of a specific country");
     System.out.println("6)Exit");
 
+    /* ROSIE : Scanner is used so that we can take input ? 
+     * can't quite follow this section 
+     */ 
+    
     Scanner scanner = new Scanner(System.in);
     CountryBO countryBo = new CountryBO();
     ArrayList<Country> countryList = new ArrayList<Country>();
@@ -25,14 +31,14 @@ public class Main {
         case 1:
           System.out.println("Enter country details");
           Country newCountry = countryBo.createCountry(scanner.next());
-          countryList.add(newCountry);
+          countryList.add(newCountry); /* ROSIE : Add newCountry to countryList using method createCountry*/ 
           break;
 
         case 2:
           System.out.println("Enter the name of the country to be searched");
           String countryToSearch = scanner.next();
           countryBo.displaySpecificCountryDetails(
-              countryList.toArray(new Country[countryList.size()]),
+              countryList.toArray(new Country[countryList.size()]), /* ROSIE : not sure what this line is doing */ 
               countryToSearch,
               countryList.size());
           break;
