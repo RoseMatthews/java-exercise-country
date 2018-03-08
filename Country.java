@@ -14,7 +14,8 @@ public class Country {
    */
   private String isdCode;
 
-  public Country(String name, String countryCode, String isdCode) {
+  /* ROSIE : use this. so that we can use the private class variables in the method ?? */ 
+  public Country(String name, String countryCode, String isdCode) { 
     this.name = name;
     this.countryCode = countryCode;
     this.isdCode = isdCode;
@@ -23,6 +24,10 @@ public class Country {
   /**
    * The display value of the country.
    */
+  
+  /* ROSIE : this is just so that it can be formatted in the way we want, and is saying that 
+   * displayValue should use paramaters this.name, this.countryCode and this.isdCode
+   */ 
   @Override
   public String toString() {
     String displayValue = String.format(
@@ -31,7 +36,10 @@ public class Country {
     return displayValue;
   }
 
-  public void setName(String name) {
+  
+  /* ROSIE : Not entirely sure why we use set/get - how do you know when to use it ?? */
+  
+    public void setName(String name) {
     this.name = name;
   }
 
