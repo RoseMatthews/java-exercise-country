@@ -21,7 +21,7 @@ public class Country {
   }
 
   /**
-   * The display value of the country, e.g. "Iraq,IQ,+32".
+   * The display value of the country.
    */
   @Override
   public String toString() {
